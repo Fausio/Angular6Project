@@ -22,4 +22,12 @@ export class CreateEmployeeComponent implements OnInit {
     })
   }
 
+
+
+    OnSubmit(): void {
+
+      console.log(this.EmpployeeForm.value);
+
+  }
+
 }
