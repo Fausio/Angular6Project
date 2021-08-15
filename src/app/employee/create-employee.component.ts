@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormGroup, FormControl } from '@angular/forms';
+import { FormGroup, FormControl, FormBuilder } from '@angular/forms';
 
 @Component({
   selector: 'app-create-employee',
@@ -8,7 +8,7 @@ import { FormGroup, FormControl } from '@angular/forms';
 })
 export class CreateEmployeeComponent implements OnInit {
 
-  constructor() { }
+  constructor(private fb: FormBuilder) { }
 
   EmpployeeForm: FormGroup | any;
   SkillsForm: FormGroup | any;
@@ -17,16 +17,16 @@ export class CreateEmployeeComponent implements OnInit {
 
 
     // create EmpployeeF form group
-    this.EmpployeeForm = new FormGroup({
-      FullName: new FormControl(),
-      Email: new FormControl(),
+    this.EmpployeeForm = this.fb.group({
+      FullName:[''],
+      Email: [''],
 
       // create skill form group
-      Skills: new FormGroup({
+      Skills: this.fb.group({
 
-        skillName: new FormControl(),
-        experienceInYears: new FormControl(),
-        proficiency: new FormControl()
+        skillName:[''],
+        experienceInYears: [''],
+        proficiency: ['beginner'],
 
       })
     })
@@ -41,6 +41,21 @@ export class CreateEmployeeComponent implements OnInit {
     console.log(this.EmpployeeForm.controls.FullName.touched);
     console.log(this.EmpployeeForm.get('FullName').value);
 
+  }
+
+  LoadDataClick(): void {
+
+    this.EmpployeeForm.patchValue({
+
+      FullName: 'Fáusio Luis Matsinhe',
+      Email: 'FausioLuis@gmail.com',
+
+      // Skills:{
+      //   skillName: '.Net',
+      //   experienceInYears: 6,
+      //   proficiency: 'advanced'
+      // }
+    })
   }
 
 }
