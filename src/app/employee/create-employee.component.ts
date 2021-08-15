@@ -15,6 +15,8 @@ export class CreateEmployeeComponent implements OnInit {
 
   ngOnInit(): void {
 
+
+     // create EmpployeeF form group
     this.EmpployeeForm = new FormGroup({
       FullName: new FormControl(),
       Email: new FormControl()
@@ -24,6 +26,7 @@ export class CreateEmployeeComponent implements OnInit {
     this.SkillsForm = new FormGroup({
         skillName: new FormControl(),
         experienceInYears: new FormControl(),
+        proficiency: new FormControl()
 
     })
   }

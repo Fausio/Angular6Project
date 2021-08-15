@@ -58,15 +58,16 @@
 </table>
 
 
-<div>
-    <input type="text" id="skillName" >
-    <input type="tel" placeholder="Experience in Years">
+<div [formGroup]="SkillsForm">
+   
+    <input formControlName="skillName"  type="text" id="skillName" >
+    <input formControlName="experienceInYears" type="tel" placeholder="Experience in Years">
 
     <div class="form-group">
         <label>Proficiency : </label>
 
-        <input type="radio" value="beginner" > beginner
-        <input type="radio" value="intermediate" > intermediate
-        <input type="radio" value="advanced" > advanced
+        <input formControlName="proficiency" type="radio" value="beginner" > beginner
+        <input formControlName="proficiency" type="radio" value="intermediate" > intermediate
+        <input formControlName="proficiency" type="radio" value="advanced" > advanced
     </div>
 </div>
