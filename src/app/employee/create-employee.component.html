@@ -20,6 +20,45 @@
                 <input  id="Email" type="text"  formControlName="Email" class="form-control">
             </div>
         </div>
+
+
+
+        <div formGroupName="Skills">
+   
+            <div class="form-group">
+                <label class="col-sm-2 control-label" for="skillName">Skill</label> 
+                <div class="col-sm-4">
+                    <input formControlName="skillName"  placeholder="skill Name" type="text" id="skillName" class="form-control" >
+                </div>
+ 
+                <div class="col-sm-4">
+                    <input formControlName="experienceInYears" placeholder="Experience in Years" type="text" id="experienceInYears" class="form-control">
+                </div>
+             
+             </div>
+
+             <div class="form-group">
+                <label class="col-md-2 control-label" >Proficiency</label>  
+                
+                <div class="col-md-8">
+                    <label class="radio-inline">
+                        <input formControlName="proficiency" type="radio" value="beginner" name="proficiency"> beginner
+                    </label>
+                    <label class="radio-inline">
+                        <input formControlName="proficiency" type="radio" value="intermediate"  name="proficiency"> intermediate
+                    </label>
+                    <label class="radio-inline">
+                        <input formControlName="proficiency" type="radio" value="advanced"   name="proficiency"> advanced
+                    </label>
+ 
+                </div>
+               
+            </div>
+            
+        </div>
+
+
+
        
     </div>
 
@@ -58,16 +97,3 @@
 </table>
 
 
-<div formControlName="SkillsForm">
-   
-    <input formControlName="skillName"  type="text" id="skillName" >
-    <input formControlName="experienceInYears" type="tel" placeholder="Experience in Years">
-
-    <div class="form-group">
-        <label>Proficiency : </label>
-
-        <input formControlName="proficiency" type="radio" value="beginner" > beginner
-        <input formControlName="proficiency" type="radio" value="intermediate" > intermediate
-        <input formControlName="proficiency" type="radio" value="advanced" > advanced
-    </div>
-</div>
