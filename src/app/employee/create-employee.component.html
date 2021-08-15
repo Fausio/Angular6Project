@@ -36,7 +36,7 @@
                     <span *ngIf="EmpployeeForm.get('FullName').errors.required">
                         Full Name is Required
                     </span>
-                    <span *ngIf="EmpployeeForm.get('FullName').errors.minLength || EmpployeeForm.get('FullName').errors.maxLength">
+                    <span *ngIf="EmpployeeForm.get('FullName').errors.minlength || EmpployeeForm.get('FullName').errors.maxlength">
                         Full Name must be greeter then 2 characters and less then 10 characters
                     </span>
                 </span>
