@@ -29,3 +29,44 @@
 
     </div>
 </form>
+
+
+
+<table border="1">
+    <tr>
+        <th style="padding: 10px;">FormGroup</th>
+        <th style="padding: 10px;">FormControl (FullName)</th>
+    </tr>
+    
+    <tr>
+        <td style="padding: 10px;">
+               touched: {{EmpployeeForm.touched}}
+         <br/> dirty :{{EmpployeeForm.dirty}}
+         <br/> valid :{{EmpployeeForm.valid}}
+         <br/> Form values :{{EmpployeeForm.value | json}}
+        </td>
+
+
+        <td style="padding: 10px;">
+            touched   :{{EmpployeeForm.get('FullName').touched}}
+        <br/> dirty     :{{EmpployeeForm.get('FullName').dirty}}
+        <br/> valid     :{{EmpployeeForm.get('FullName').valid}}
+        <br/> Full Name :{{EmpployeeForm.get('FullName').value}}
+        </td>
+
+    </tr> 
+</table>
+
+
+<div>
+    <input type="text" id="skillName" >
+    <input type="tel" placeholder="Experience in Years">
+
+    <div class="form-group">
+        <label>Proficiency : </label>
+
+        <input type="radio" value="beginner" > beginner
+        <input type="radio" value="intermediate" > intermediate
+        <input type="radio" value="advanced" > advanced
+    </div>
+</div>
